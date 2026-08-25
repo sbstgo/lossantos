@@ -1,5 +1,6 @@
 import ImageSlot from './ImageSlot';
 import { site } from '../siteConfig';
+import { photos } from '../photos';
 
 const stats = [
   { value: '04', label: 'Marcas especialistas' },
@@ -11,7 +12,12 @@ export default function Nosotros() {
   return (
     <section id="nosotros" className="nosotros">
       <div className="nosotros__media">
-        <ImageSlot placeholder="Foto del equipo o del box de trabajo" className="nosotros__image" />
+        <ImageSlot
+          src={photos.nosotros}
+          alt="Equipo de Los Santos"
+          placeholder="Foto del equipo o del box de trabajo. Coloca nosotros.jpg en src/assets/img/photos/"
+          className="nosotros__image"
+        />
       </div>
 
       <div className="nosotros__copy">

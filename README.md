@@ -23,24 +23,25 @@ Abre `http://localhost:5173`.
 - `src/assets/img/` — logos. `logo-white.png` para fondos oscuros, `logo-black.png`
   para fondos claros.
 
-## Reemplazar las fotos de marcador de posición
+## Poner las fotos reales
 
-El hero, la sección "Nosotros" y los 6 espacios de la galería están usando
-`ImageSlot`, un componente que muestra un recuadro con texto mientras no haya foto
-real. Para poner una foto:
+No hace falta tocar código. Solo copia el archivo con el nombre correcto dentro de
+`src/assets/img/photos/` y aparece automáticamente (formatos: jpg, jpeg, png, webp):
 
-1. Copia la imagen a `src/assets/img/` (ej. `hero.jpg`).
-2. Impórtala en el componente correspondiente y pásala como prop `src` a
-   `<ImageSlot>`:
+| Foto | Nombre de archivo |
+|---|---|
+| Hero (portada) | `hero.jpg` |
+| Nosotros (equipo / box) | `nosotros.jpg` |
+| Galería, foto 1 | `g1.jpg` |
+| Galería, foto 2 (horizontal destacada) | `g2.jpg` |
+| Galería, foto 3 | `g3.jpg` |
+| Galería, foto 4 | `g4.jpg` |
+| Galería, foto 5 | `g5.jpg` |
+| Galería, foto 6 (panorámica) | `g6.jpg` |
 
-   ```jsx
-   import hero from '../assets/img/hero.jpg';
-   <ImageSlot src={hero} alt="Auto en el box" className="hero__image" />
-   ```
-
-Los 6 slots de la galería están definidos en el arreglo `galeria` de
-`src/siteConfig.js` — puedes añadir ahí una propiedad `src` e importarla en
-`Galeria.jsx`.
+Mientras un nombre no exista, esa sección sigue mostrando el recuadro de marcador de
+posición. Con `npm run dev` corriendo, la foto aparece apenas la guardas en la
+carpeta — no hace falta reiniciar nada.
 
 ## El mapa de Google Maps
 

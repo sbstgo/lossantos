@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import ImageSlot from './ImageSlot';
 import { galeria } from '../siteConfig';
+import { photos } from '../photos';
 
 const spanClass = {
   tall: 'galeria__item--tall',
@@ -40,7 +41,7 @@ export default function Galeria() {
             className={`galeria__item ${spanClass[item.span] || ''}`}
             onClick={() => setOpenIndex(i)}
           >
-            <ImageSlot placeholder={item.placeholder} className="galeria__image" />
+            <ImageSlot src={photos[item.id]} alt={item.placeholder} placeholder={item.placeholder} className="galeria__image" />
           </button>
         ))}
       </div>
@@ -48,7 +49,7 @@ export default function Galeria() {
       {open && (
         <div className="lightbox" onClick={() => setOpenIndex(null)}>
           <div className="lightbox__frame" onClick={(e) => e.stopPropagation()}>
-            <ImageSlot placeholder={open.placeholder} className="lightbox__image" />
+            <ImageSlot src={photos[open.id]} alt={open.placeholder} placeholder={open.placeholder} className="lightbox__image" />
           </div>
           <button
             type="button"

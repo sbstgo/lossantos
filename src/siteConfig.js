@@ -33,10 +33,10 @@ export const servicios = [
 ];
 
 export const galeria = [
-  { id: 'g1', placeholder: 'Trabajo 01', span: 'tall' },
-  { id: 'g2', placeholder: 'Trabajo 02 — foto horizontal destacada', span: 'wide-tall' },
-  { id: 'g3', placeholder: 'Trabajo 03', span: 'normal' },
-  { id: 'g4', placeholder: 'Trabajo 04', span: 'tall' },
-  { id: 'g5', placeholder: 'Trabajo 05', span: 'normal' },
-  { id: 'g6', placeholder: 'Trabajo 06 — foto panorámica', span: 'wide' },
+  { id: 'g1', placeholder: 'Trabajo 01 — coloca g1.jpg en src/assets/img/photos/', span: 'tall' },
+  { id: 'g2', placeholder: 'Trabajo 02 (horizontal destacada) — g2.jpg', span: 'wide-tall' },
+  { id: 'g3', placeholder: 'Trabajo 03 — g3.jpg', span: 'normal' },
+  { id: 'g4', placeholder: 'Trabajo 04 — g4.jpg', span: 'tall' },
+  { id: 'g5', placeholder: 'Trabajo 05 — g5.jpg', span: 'normal' },
+  { id: 'g6', placeholder: 'Trabajo 06 (panorámica) — g6.jpg', span: 'wide' },
 ];

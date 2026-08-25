@@ -1,5 +1,6 @@
 import ImageSlot from './ImageSlot';
 import { whatsappUrl } from '../siteConfig';
+import { photos } from '../photos';
 
 export default function Hero() {
   return (
@@ -41,7 +42,12 @@ export default function Hero() {
       </div>
 
       <div className="hero__media">
-        <ImageSlot placeholder="Foto principal: auto en el box" className="hero__image" />
+        <ImageSlot
+          src={photos.hero}
+          alt="Los Santos — taller automotriz"
+          placeholder="Foto principal: auto en el box. Coloca hero.jpg en src/assets/img/photos/"
+          className="hero__image"
+        />
         <div className="hero__gradient" />
         <div className="hero__corner hero__corner--tr" />
         <div className="hero__corner hero__corner--bl" />
